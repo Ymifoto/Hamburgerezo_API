@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/hamburgerezo.css">
+    <title>Hamburgerező</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Hamburgerező</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="arlista.html">Árlista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="rendeles.html">Rendelés</a>
+                    </li>
+                </ul>
+                <a href="admin.html"><button class="btn btn-danger">Admin</button></a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="row" style="margin-top:5em">
+        <div class="col-2 oldalsav"></div>
+        <div class="col-8 kozep">
+            <div class="row">
+                <div class="col-6" id="orderer">
+                    <div class="mb-3 form-group">
+                        <label for="name" class="form-label">Név</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="address" class="form-label">Cím</label>
+                        <input type="text" name="address" class="form-control">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Email cím">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="comment" class="form-label">Megjegyzés</label>
+                        <textarea type="text" name="comment" rows="3" class="form-control"
+                            placeholder="Extra szállítási információk"></textarea>
+                    </div>
+                </div>
+                <div class="col-6">
+                        <div style="margin-bottom: .5rem;">Hamburger</div>
+                        <select class="form-select" style="margin-bottom: 1rem" aria-label="Default select example">
+                            <option selected>Válassz hamburgert</option>
+                        </select>
+                        <div style="margin-bottom: .5rem;">Feltétek</div>
+                        <div class="row" id="feltetek">
+                            <div class="col-4"></div>
+                            <div class="col-4"></div>
+                            <div class="col-4"></div>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="amount" class="form-label">Mennyiség</label>
+                            <input type="number" name="amount" class="form-control" value ="1" id="amountnumber">
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="comment-order" class="form-label">Megjegyzés</label>
+                            <textarea type="text" name="comment-order" rows="2" class="form-control"
+                                placeholder="Egyéb kérések" id="comment" ></textarea>
+                        </div>
+                        <div>
+                            <button  id="adding" class="btn btn-primary" type="submit" onclick="getSelectedHamburger()">Hozzáadás</button>
+                        </div>
+                </div>
+            </div>
+            <div class="container" style="margin-top: 20px;">
+                <table class="table" id="rendelestabla" style="display:none;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th style="text-align: center;">Rendelés összesítő</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>Darabszám</th>
+                            <th>Tétel</th>
+                            <th>Megjegyzés</th>
+                            <th>Ár</th>
+                        </tr>
+                    </thead>
+                    <tbody id="osszesito">
+                    </tbody>
+                    <tr>
+                        <td style="border:none;"></td>
+                        <td style="border:none;"></td>
+                        <td style="float:right;font-weight:600;border:none;" >Szállítási díj:</td>
+                        <td id="deliverycost" style="font-weight:600;border:none;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border:none;"></td>
+                        <td style="border:none;"></td>
+                        <td style="float:right;font-weight:600;border:none;" >Összesen:</td>
+                        <td id="ertek" style="font-weight:600;border:none;"></td>
+                    </tr>
+                </table>
+                <div style="text-align: center; display: none;" id="orderbtn"><button type="submit" class="btn btn-danger btn-lg" id="order" onclick="saveOrderData()">Rendelés leadása</button></div>
+            </div>
+        </div>
+    <div class="col-2 oldalsav"></div>
+    <script src="src/js/data.js"></script>
+    <script src="src/js/table.js"></script>
+    <script src="src/js/rendeles.js"></script>
+    <script>
+        getHamburgers();
+        getFeltetek();
+    </script>
+</body>
+
+</html>

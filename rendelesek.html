@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/hamburgerezo.css">
+    <script src="https://kit.fontawesome.com/b3322e8d32.js" crossorigin="anonymous"></script>
+    <title>Hamburgerező</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Hamburgerező</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="arlista.html">Árlista</a>
+                    </li>
+                    <li class="nav-item">   
+                        <a class="nav-link active" href="rendeles.html">Rendelés</a>
+                    </li>
+                </ul>
+                <a href="admin.html"><button class="btn btn-danger">Admin</button></a>
+        </div>
+    </nav>
+    <div class="row" style="margin-top:5em">
+            <div class="col-2 oldalsav admin"></div>
+            <div class="col-8 kozep admin">
+                <div class="table-responsive-sm">
+                    <h3 class="text-center">Rendelések</h3>
+                <table id="hamburgerek" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Név</th>
+                            <th>Cím</th>
+                            <th>Tételek</th>
+                            <th>Megjegyzés</th>
+                            <th style="width: 7%;">Szállítás díj</th>
+                            <th style="width: 10%;">Végösszeg</th>
+                            <th style="width: 10%;">Dátum</th>
+                            <th style="width: 10%;">Státusz</th>
+                            <th style="width: 5%;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders">
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="col-2 oldalsav admin"></div>
+<script src="src/js/rendelesek.js"></script>
+<script src="src/js/data.js"></script>
+<script src="src/js/table.js"></script>
+<script>
+    getOrdersData();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/hamburgerezo.css">
+    <script src="https://kit.fontawesome.com/b3322e8d32.js" crossorigin="anonymous"></script>
+    <title>Hamburgerező</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Hamburgerező</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="arlista.html">Árlista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="rendeles.html">Rendelés</a>
+                    </li>
+                </ul>
+                <a href="admin.html"><button class="btn btn-danger">Admin</button></a>
+            </div>
+        </div>
+    </nav>
+    <div class="row" style="margin-top:5em">
+            <div class="col-2 oldalsav admin"></div>
+            <div class="col-8 kozep admin">
+                <div class="row">
+                    <div class="col-4" id="delivery">
+                        <h3>Szállítási díj</h3>
+                        
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4"></div>
+                </div>
+                
+                <div class="table-responsive-sm">
+                    <h3 class="text-center">Hamburgerek</h3>
+                <table id="hamburgerek" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">#</th>
+                            <th>Név</th>
+                            <th>Leírás</th>
+                            <th style="width: 10%;">Ár</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive-sm">
+                <h3 class="text-center">Feltétek</h3>
+                <table id ="feltetek" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">#</th>
+                            <th>Feltét</th>
+                            <th>Leírás</th>
+                            <th style="width: 10%;">Ár</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <div class="col-2 oldalsav admin"></div>
+    </div>
+<script src="src/js/admin.js"></script>
+<script src="src/js/data.js"></script>
+<script src="src/js/table.js"></script>
+<script type="text/javascript">
+getArlistaData();
+getFeltetekData();
+getDeliveryData();
+</script>
+</body>
+
+</html>

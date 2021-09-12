@@ -1,0 +1,175 @@
+{
+  "hamburgerek": [
+    {
+      "id": 1,
+      "name": "AUSZTRÁL ÓRIÁS HAMBURGER",
+      "leiras": "50dkg szaftos húspogácsa, házi hamburger szósz, friss zöldség, cheddar sajt, bacon,steak burgonya, amerikai káposztasaláta",
+      "price": "4390"
+    },
+    {
+      "id": 2,
+      "name": "BUFFALO BLACK BURGER",
+      "leiras": "30 dkg szaftos húspogácsa ausztrál marhanyakból fekete buciban, házi hamburger szósz, friss zöldség, cheddar sajt, pirított hagyma, bacon, amerikai káposztasaláta, steak burgonya",
+      "price": "3490"
+    },
+    {
+      "id": 4,
+      "name": "VEGA BURGER",
+      "leiras": "grillezett kecskesajt fekete buciba töltve, brazil szósszal és friss zöldségekkel",
+      "price": "2590"
+    },
+    {
+      "id": 5,
+      "name": "CSIRKE BURGER",
+      "leiras": "30 dkg friss fûszernövényekkel ízesített húspogácsa fekete buciba töltve, friss zöldségekkel, uborkás majonézzel, amerikai káposztasalátával, steak burgonyával",
+      "price": "2990"
+    },
+    {
+      "id": 3,
+      "name": "ÓRIÁS BUFFALO STEAK SANDWICH",
+      "leiras": "50 dkg hússal megtöltött óriás szendvics, jalapeno paprikával és cheddar sajttal sütve, amerikai káposztasalátával",
+      "price": "4490"
+    }
+  ],
+  "feltetek": [
+    {
+      "id": 1,
+      "name": "Extra hagyma",
+      "leiras": "Plusz vöröshagyma",
+      "price": "200"
+    },
+    {
+      "id": 2,
+      "name": "Extra sajt",
+      "leiras": "Plusz cheddar sajt",
+      "price": "490"
+    },
+    {
+      "id": 3,
+      "name": "Extra hús",
+      "leiras": "Plusz húspogácsa",
+      "price": "990"
+    },
+    {
+      "id": 4,
+      "name": "Extra krumpli",
+      "leiras": "Dupla hasábburgonya",
+      "price": "290"
+    },
+    {
+      "id": 5,
+      "name": "Extra bacon",
+      "leiras": "Plusz bacon feltét",
+      "price": "390"
+    },
+    {
+      "id": 6,
+      "name": "Extra saláta",
+      "leiras": "Plusza saláta feltét",
+      "price": "290"
+    }
+  ],
+  "szallitas": [
+    {
+      "id": 1,
+      "treshold": 10000,
+      "cost": 1600
+    }
+  ],
+  "orders": [
+    {
+      "name": "Víz Elek",
+      "address": "Kispál utca 10",
+      "email": "valami@valami.com",
+      "items": [
+        {
+          "amount": "1",
+          "name": "BUFFALO BLACK BURGER + Extra hagyma + Extra krumpli + Extra sajt",
+          "comment": "Valami",
+          "price": "4470 Ft"
+        },
+        {
+          "amount": "1",
+          "name": "AUSZTRÁL ÓRIÁS HAMBURGER + Extra hagyma + Extra krumpli + Extra sajt + Extra bacon + Extra hús + Extra saláta",
+          "comment": "",
+          "price": "7140 Ft"
+        }
+      ],
+      "deliverycost": 0,
+      "grandtotal": 11610,
+      "deliverycomment": "VAlami",
+      "ordered": "2021-8-25 17:16:53",
+      "shipped": true,
+      "id": 3
+    },
+    {
+      "name": "Nagy Péter",
+      "address": "Kispál utca 10",
+      "email": "valami@valami.hu",
+      "items": [
+        {
+          "amount": "4",
+          "name": "AUSZTRÁL ÓRIÁS HAMBURGER + Extra hagyma",
+          "comment": "",
+          "price": "18760 Ft"
+        },
+        {
+          "amount": "3",
+          "name": "VEGA BURGER + Extra sajt",
+          "comment": "",
+          "price": "9240 Ft"
+        }
+      ],
+      "deliverycost": 0,
+      "grandtotal": 28000,
+      "deliverycomment": "",
+      "ordered": "2021-8-25 18:31:54",
+      "shipped": true,
+      "id": 4
+    },
+    {
+      "name": "Nagy Luca",
+      "address": "Kispál utca 10",
+      "email": "valami@valami.hu",
+      "items": [
+        {
+          "amount": "1",
+          "name": "BUFFALO BLACK BURGER + Extra krumpli",
+          "comment": "",
+          "price": "3780 Ft"
+        },
+        {
+          "amount": "1",
+          "name": "CSIRKE BURGER + Extra krumpli",
+          "comment": "",
+          "price": "3280 Ft"
+        }
+      ],
+      "deliverycost": 1600,
+      "grandtotal": 8660,
+      "deliverycomment": "dsdsfdfsfsfs",
+      "ordered": "2021-8-25 19:41:0",
+      "shipped": false,
+      "id": 5
+    },
+    {
+      "name": "Jhon Doe",
+      "address": "Kispál utca 10",
+      "email": "valami@valami.hu",
+      "items": [
+        {
+          "amount": "1",
+          "name": "BUFFALO BLACK BURGER + Extra hagyma",
+          "comment": "fdfsfsdfsdfsf",
+          "price": "3690 Ft"
+        }
+      ],
+      "deliverycost": 1600,
+      "grandtotal": 5290,
+      "deliverycomment": "sdfsfsdfsf",
+      "ordered": "2021-8-26 21:20:51",
+      "shipped": false,
+      "id": 6
+    }
+  ]
+}
