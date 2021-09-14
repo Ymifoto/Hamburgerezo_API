@@ -1,5 +1,3 @@
-const url = "https://export.avbox.hu/api/?site=hamburgerezo&key=hamburger1234";
-
 function getArlistaData() {
 
     sendData(url,"get","hamburgerek").then (
